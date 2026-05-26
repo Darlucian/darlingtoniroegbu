@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <style>
+    body {font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;color:#222;line-height:1.6;}
+    header {background:#0b74de;color:#fff;padding:60px 20px;text-align:center;}
+    header h1 {font-size:2.5em;animation:slideIn 1s ease forwards;}
+    header p {font-size:1.2em;opacity:0;animation:fadeIn 2s ease forwards 0.5s;}
+    .section {max-width:1000px;margin:40px auto;padding:0 20px;}
+    .section h2 {text-align:center;color:#0b74de;margin-bottom:20px;animation:fadeIn 1s ease forwards;}
+    .card {border:1px solid #eee;padding:20px;margin:20px 0;border-radius:8px;
+           opacity:0;transform:translateY(20px);
+           transition:opacity 0.6s ease, transform 0.6s ease;}
+    .card.visible {opacity:1;transform:translateY(0);}
+    .card:hover {transform:translateY(-5px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    .button {display:inline-block;background:#0b74de;color:#fff;padding:10px 16px;
+             border-radius:6px;text-decoration:none;transition:background 0.3s;}
+    .button:hover {background:#084c9e;}
+    footer {background:#f5f5f5;padding:20px;text-align:center;color:#666;}
+    html {scroll-behavior:smooth;}
+    @keyframes slideIn {from{transform:translateY(-30px);opacity:0;} to{transform:translateY(0);opacity:1;}}
+    @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Iroegbu Darlington</h1>
+    <p>Frontend/UI Developer • Nextjs • PHP • Cloud</p>
+    <a href="#projects" class="button">View My Work</a>
+  </header>
+
+  <section id="projects" class="section">
+    <h2>Featured Projects</h2>
+
+    <article class="card">
+      <h3>Netflix React + TypeScript Demo</h3>
+      <p><strong>Problem:</strong> Streaming UI clone needed.</p>
+      <p><strong>Solution:</strong> Built responsive Netflix‑style interface with React + TypeScript.</p>
+      <p><strong>Outcome:</strong> Demo shows reusable components and modern frontend skills.</p>
+      <p><a class="button" href="https://drive.google.com/file/d/1skbWaJXLDi8RBmWTUn1qYAXo9w8j1RRl/view?usp=sharing" target="_blank">View Demo</a></p>
+    </article>
+
+    <article class="card">
+      <h3>UI/UX Landing Pages</h3>
+      <p><strong>Problem:</strong> Businesses needed clear call‑to‑action designs.</p>
+      <p><strong>Solution:</strong> Designed and coded responsive landing pages with Figma prototypes.</p>
+      <p><strong>Outcome:</strong> Improved user flow and professional presentation.</p>
+      <p><a class="button" href="https://drive.google.com/drive/folders/13Y-QRDwH38SXL5441lLaCTazsbD1AgMQ?usp=sharing" target="_blank">View Designs</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Saas App Collaboration (Ongoing)</h3>
+      <p><strong>Problem:</strong> Pricing and subscription options lacked clear hierarchy</p>
+      <p><strong>Solution:</strong> Designed a simple yet eye-catching subscription model that's easy to comprehend</p>
+      <p><strong>Outcome:</strong> Result shows knowledge on design and User emotional response: Testers described the flow as “soothing" and easy to follow. </p>
+      <p><a class="button" href="https://calm-pocket-guide.base44.app/" target="_blank">View Demo</a></p>
+    </article>
+ 
+<article class="card">
+  <h3>DemoBank App (PHP)</h3>
+  <p><strong>Problem:</strong> Learners needed a functional banking workflow demo beyond static pages.</p>
+  <p><strong>Solution:</strong> Built a full-stack project with PHP as backend with onboarding, simple role-based feature, transactions (transfer, withdraw, deposit), and transaction history.</p>
+  <p><strong>Outcome:</strong> Demonstrates backend logic and persistent data handling in a real-world scenario.</p>
+  <p>
+    <a class="button" href="https://www.loom.com/share/525f96c816b14827851684079383d971" target="_blank">View Demo</a>
+    <a class="button" href="https://github.com/Darlucian/Demo-Bank-App" target="_blank">View Repo</a>
+  </p>
+</article>
+
+
+    <article class="card">
+      <h3>Cloud Computing</h3>
+     <!--  <p><strong>Problem:</strong> Manual deploys were slow and error‑prone.</p>
+      <p><strong>Solution:</strong> Created Terraform plan with documented steps.</p>
+      <p><strong>Outcome:</strong> Repo demonstrates automated infrastructure setup.</p>
+      <p><a class="button" href="https://github.com/yourusername/terraform-demo" target="_blank">View Repo</a></p> -->
+      <p>Currently under training...</p>
+    </article>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I’m a frontend/UI developer with React + TypeScript, PHP backend experience, and growing cloud/DevOps expertise. I build responsive apps, design clean interfaces, and automate deployments with Terraform.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: iroegbudarlington0@gmail.com</p>
+    <p>X: https://x.com/wunderfashy</p>
+    <p>GitHub: github.com/Darlucian</p>
+  </section>
+
+  <footer>
+    © 2026 Iroegbu Darlington — Open to remote roles
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
